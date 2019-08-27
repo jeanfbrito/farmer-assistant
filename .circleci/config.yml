@@ -73,4 +73,6 @@ workflows:
   setup_and_test:
     jobs:
       - setup
-      - test
+      - test:
+          requires:
+            - setup
