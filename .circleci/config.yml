@@ -1,19 +1,9 @@
 version: 2
-
-defaults: &defaults
-  working_directory: ~/repo
-  docker:
-    - image: circleci/ruby:2.6.3-node
-      environment:
-        PGHOST: 127.0.0.1
-        PGUSER: root
-        RAILS_ENV: test
-
-    - image: circleci/postgres:10.10
-
 jobs:
   setup:
-    <<: *defaults
+    working_directory: ~/repo
+    docker:
+      - image: circleci/ruby:2.6.3-node
     steps:
       - checkout
 
@@ -45,7 +35,16 @@ jobs:
           paths:
             - /home/circleci/project/public/packs-test/
   test:
-    <<: *defaults
+    working_directory: ~/repo
+    docker:
+      - image: circleci/ruby:2.6.3-node
+        environment:
+          POSTGRES_HOST: 127.0.0.1
+          POSTGRES_USER: root
+          RAILS_ENV: test
+
+      - image: circleci/postgres:10.10
+
     steps:
       - checkout
       - restore_cache:
