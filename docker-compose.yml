@@ -19,6 +19,8 @@ services:
     volumes:
       - .:/app
       - bundler_cache:/bundler_cache
+    env_file:
+      - .env
     links:
       - postgres
     ports:
