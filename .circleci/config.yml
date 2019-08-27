@@ -48,7 +48,15 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-
+      - restore_cache:
+          keys:
+            - webpack-{{ .Revision }}
+      - restore_cache:
+          keys:
+            - bundle-{{ checksum "Gemfile.lock" }}
+      - run: gem update --system
+      - run: gem install bundler
+      - run: bundle install --path vendor/bundle
       - run: sudo apt install postgresql-client
       - run: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: bundle exec rake db:create
