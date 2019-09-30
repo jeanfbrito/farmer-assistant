@@ -27,6 +27,12 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bundler', '2.0.2'
 
+# Frontend
+gem 'slim', '~> 4.0', '>= 4.0.1'
+gem 'coffee-rails', '~> 5.0'
+gem 'uglifier', '~> 4.1', '>= 4.1.20'
+gem 'font-awesome-sass', '~> 5.9.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

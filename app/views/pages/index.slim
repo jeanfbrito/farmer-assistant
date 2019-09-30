@@ -1,0 +1,78 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-success.top_navbar
+  .container
+    a.navbar-brand href="#"
+      i.fas.fa-leaf.mr-2.text-white
+      | Farmer Assistant
+    button.navbar-toggler aria-controls="navbarsExample07" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarsExample07" data-toggle="collapse" type="button"
+      span.navbar-toggler-icon
+    #navbarsExample07.collapse.navbar-collapse
+      ul.navbar-nav.ml-4
+        .btn-group.nav-item.dropdown
+          button.btn.btn-primary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+            | Selected farm: <strong> My nice farm </strong>
+          .dropdown-menu
+            a.dropdown-item href="#"  Another farm
+            a.dropdown-item href="#"  Another farm again
+            a.dropdown-item href="#"  Yet another farm
+            .dropdown-divider
+            a.dropdown-item href="#"
+              i.fas.fa-plus.mr-1
+              | Create new farm
+      ul.navbar-nav.ml-auto
+        li.nav-item.dropdown
+          a#dropdown07.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#"
+            = image_tag("lemmy.jpg", height: '25', width: '25', class: "rounded border")
+          .dropdown-menu aria-labelledby="dropdown07"
+            a.dropdown-item href="#"  Profile
+            a.dropdown-item href="#"  Configurations
+            a.dropdown-item href="#"
+              | Logout
+              i.fas.fa-sign-out-alt.ml-2
+nav.navbar.navbar-expand-lg.navbar-dark.bg-success
+  .container
+    #navbarsExample07.collapse.navbar-collapse
+      ul.navbar-nav.font-weight-bold
+        li.nav-item.active
+          a.nav-link href="#"
+            i.far.fa-map.mr-1
+            | Farms
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link href="#"
+            i.fas.fa-seedling.mr-1
+            | Planting
+        li.nav-item
+          a.nav-link href="#"
+            i.fas.fa-warehouse.mr-1
+            | Inventory
+        li.nav-item
+          a.nav-link href="#"
+            i.fas.fa-list.mr-1
+            | Tasks
+        li.nav-item
+          a.nav-link href="#"
+            i.fas.fa-shopping-basket.mr-1
+            | Harvesting
+        li.nav-item
+          a.nav-link href="#"
+            i.fas.fa-cloud-sun.mr-1
+            | Weather
+        li.nav-item
+          a.nav-link href="#"
+            i.far.fa-calendar-alt.mr-1
+            | Calendar
+section.content
+  .container
+    .card
+      .card-body
+        h3.ml-3
+          | Welcome Jim Blaze!
+        nav aria-label="breadcrumb"
+          ol.breadcrumb
+            li.breadcrumb-item
+              a href="#"
+                i.fas.fa-home
+            li.breadcrumb-item
+              a href="#"  Library
+            li.breadcrumb-item.active aria-current="page"  Data
+

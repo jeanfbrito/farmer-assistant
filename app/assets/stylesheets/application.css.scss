@@ -1,0 +1,91 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+section.content {
+  border-radius: .55rem;
+  margin: 6px 0 0 0;
+  z-index: 9;
+  position: relative;
+}
+
+section.content::before {
+  background: #28a745;
+  top: -15px;
+  left: 0;
+  content: '';
+  height: 90px;
+  width: 100%;
+  position: absolute;
+}
+
+body{
+  background-color: #f4f7f6;
+  color: #424242;
+}
+
+.card {
+  background: #fff;
+  margin-bottom: 30px;
+  transition: .5s;
+  border: 0;
+  border-radius: .55rem;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+  height: 120px;
+}
+
+.top_navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1600px) {
+	.container {
+		max-width: 1500px
+	}
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1359px) {
+	.container {
+		max-width: 1300px
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	.hidden-md {
+		display: none
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.hidden-sm {
+		display: none !important
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.hidden-xs {
+		display: none !important
+	}
+}
+
+/*
+makes navbar space between work
+.navbar-nav,
+.mr-auto {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: space-between;
+}*/
